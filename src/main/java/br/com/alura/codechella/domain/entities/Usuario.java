@@ -8,8 +8,10 @@ public class Usuario {
   private LocalDate nascimento;
   private String email;
 
+  public Usuario() {}
+
   public Usuario(String cpf, String nome, LocalDate nascimento, String email) {
-    if (cpf == null || !cpf.matches("\\{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}")) {
+    if (cpf == null || !cpf.matches("\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}")) {
       throw new IllegalArgumentException("CPF is not corrected.");
     }
 
